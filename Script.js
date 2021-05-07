@@ -91,7 +91,6 @@ document.getElementById("firstName").addEventListener("input", myFunction1);
       let flight1 = document.getElementById("gds");
       let fer=e.target.value;
       let ter=fer.split(" ");
-      console.log(ter);
       let wer = ter.lenght;
       let outbound = checkCity(ter[ter.length - 11].slice(1,4));
       let inbound = checkCity(ter[ter.length - 8]);
@@ -99,7 +98,6 @@ document.getElementById("firstName").addEventListener("input", myFunction1);
     }
 
     function checkCity(a) {
-      console.log(a);
       return (latin[iata.indexOf(a)]);
     }
    
