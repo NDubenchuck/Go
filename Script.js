@@ -216,6 +216,9 @@ document.getElementById("firstName").addEventListener("input", myFunction1);
                             case "PRG":
                             return 'Прага';
                             break;
+                            case "KIV":
+                            return 'Кишенёв';
+                            break;
                             default:
                               return city;
     }
