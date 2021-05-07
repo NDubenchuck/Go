@@ -1,4 +1,6 @@
 // const utils = require ('./scripts/functions');
+const iata =['ODS', 'IEV', "KBP", "HRK", "DNK", "LWO", "IFO", "IST", "SAW", "FRA", "MUC", "BER", "LGW", "LHR", "LTN", "TBS", "DXB", "VIE", "BUD", "MSQ", "KUT", "EVN", "ZRH", "WAW", "CDG", "OZH", "TLV", "MIA", "GZT", "VNO", "YYZ", "YVR", "BUS", "BCN", "AYT", "AMS", "PRG", "KIV"];
+const latin =['Одесса', 'Киев(Жуляны)', 'Киев(Борисполь)', 'Харьков', 'Днепр', 'Львов', 'Ивано-Франковск', 'Стамбул(Новый)',  'Стамбул(Сабиха)', 'Франкфурт', 'Мюнхен', 'Берлин', 'Лондон(Гатвик)', 'Лондон(Хитроу)', 'Лондон(Лутон)', 'Тбилиси', 'Дубай', 'Вена', 'Будапешт', 'Минск', 'Кутаиси', 'Ереван', 'Цюрих', 'Варшава', 'Париж (Шарль-де-Голь)', 'Запорожье', 'Тель-Авив', 'Майами', 'Газиантеп', 'Вильнюс', 'Торонто', 'Ванкувер', 'Батуми', 'Барселона', 'Анталия', 'Амстердам', 'Прага', 'Кишенёв'];
 
 document.getElementById("firstLine").addEventListener("input", fullLIne);
 document.getElementById("firstName").addEventListener("input", myFunction1);
@@ -92,134 +94,12 @@ document.getElementById("firstName").addEventListener("input", myFunction1);
       console.log(ter);
       let wer = ter.lenght;
       let outbound = checkCity(ter[ter.length - 11].slice(1,4));
-      let inbound = checkCity(ter[ter.length - 9]);
+      let inbound = checkCity(ter[ter.length - 8]);
       flight1.textContent=ter[0]+'  '+'  '+outbound+' - '+inbound+'   '+ter[ter.length - 5]+'  '+ter[ter.length - 1];
     }
 
     function checkCity(a) {
-      let city = a.toUpperCase();
-      switch (city){
-      case "ODS":
-        return 'Одесса';
-        break;
-        case "IEV":
-        return 'Киев(Жуляны)';
-        break;
-        case "KBP":
-          return 'Киев(Борисполь)';
-          break;
-          case "HRK":
-            return 'Харьков';
-            break;
-            case "DNK":
-              return 'Днепр';
-              break;
-              case "LWO":
-                return 'Львов';
-                break;
-                case "IFO":
-                  return 'Ивано-Франковск';
-                  break;
-                  case "IST":
-                    return 'Стамбул(Новый)';
-                    break;
-                    case "SAW":
-                      return 'Стамбул(Сабиха)';
-                      break;
-                      case "FRA":
-                        return 'Франкфурт';
-                        break;
-                        case "MUC":
-                          return 'Мюнхен';
-                          break;
-                          case "BER":
-                            return 'Берлин';
-                            break;
-                            case "JFK":
-                              return 'Нью-Йорк(Кенеди)';
-                              break;
-                              case "BER":
-                            return 'Берлин';
-                            break;
-                            case "LGW":
-                            return 'Лондон(Гатвик)';
-                            break;
-                            case "LHR":
-                            return 'Лондон(Хитроу)';
-                            break;
-                            case "LTN":
-                            return 'Лондон(Лутон)';
-                            break;
-                            case "TBS":
-                            return 'Тбилиси';
-                            break;
-                            case "DXB":
-                              return 'Дубай';
-                              break;
-                              case "VIE":
-                            return 'Вена';
-                            break;
-                            case "BUD":
-                            return 'Будапешт';
-                            break;
-                            case "MSQ":
-                            return 'Минск';
-                            break;
-                            case "KUT":
-                            return 'Кутаиси';
-                            break;
-                            case "EVN":
-                            return 'Ереван';
-                            break;
-                            case "ZRH":
-                            return 'Цюрих';
-                            break;
-                            case "WAW":
-                            return 'Варшава';
-                            break;
-                            case "CDG":
-                            return 'Париж (Шарль-де-Голь)';
-                            break;
-                            case "OZH":
-                            return 'Запорожье';
-                            break;
-                            case "TLV":
-                            return 'Тель-Авив';
-                            break;
-                            case "MIA":
-                            return 'Майами';
-                            break;
-                             case "GZT":
-                            return 'Газиантеп';
-                            break;
-                            case "VNO":
-                            return 'Вильнюс';
-                            break;
-                            case "YYZ":
-                            return 'Торонто';
-                            break;
-                            case "YVR":
-                            return 'Ванкувер';
-                            break;
-                            case "BUS":
-                            return 'Батуми';
-                            break;
-                            case "BCN":
-                            return 'Барселона';
-                            break;
-                            case "AYT":
-                            return 'Анталия';
-                            break;
-                            case "AMS":
-                            return 'Амстердам';
-                            break;
-                            case "PRG":
-                            return 'Прага';
-                            break;
-                            case "KIV":
-                            return 'Кишенёв';
-                            break;
-                            default:
-                              return city;
+      console.log(a);
+      return (latin[iata.indexOf(a)]);
     }
-}
+   
