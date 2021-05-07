@@ -98,6 +98,7 @@ document.getElementById("firstName").addEventListener("input", myFunction1);
     }
 
     function checkCity(a) {
+      console.log(a);
       return (latin[iata.indexOf(a)]);
     }
    
