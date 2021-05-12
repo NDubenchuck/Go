@@ -16,7 +16,7 @@ document.getElementById("firstName").addEventListener("input", myFunction1);
       let finish = document.getElementById("paxExpDate1");
       finish.textContent = e.target.value.toUpperCase();
       let finish1 = document.getElementById("paxExpDate11");
-      finish1.textContent = checkDate(e.target.value);
+      finish1.textContent = e.target.value.toUpperCase();
     }
 
     function paxGender(e) {
