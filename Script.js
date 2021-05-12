@@ -93,12 +93,14 @@ document.getElementById("firstName").addEventListener("input", myFunction1);
       let ter=fer.split(" ");
       let wer = ter.lenght;
       let outbound = checkCity(ter[ter.length - 11].slice(1,4));
-      let inbound = checkCity(ter[ter.length - 8]);
+      let inbound = checkCity(ter[ter.length - 9]);
+      console.log(outbound);
+      console.log(inbound);
+      console.log(ter);
       flight1.textContent=ter[0]+'  '+'  '+outbound+' - '+inbound+'   '+ter[ter.length - 5]+'  '+ter[ter.length - 1];
     }
 
     function checkCity(a) {
-      console.log(a);
       return (latin[iata.indexOf(a)]);
     }
    
